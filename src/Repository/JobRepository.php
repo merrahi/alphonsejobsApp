@@ -47,4 +47,23 @@ class JobRepository extends ServiceEntityRepository
         ;
     }
     */
+    /**
+     * @param int|null $categoryId
+     *
+     * @return Job[]
+     */
+    public function findActiveJobs(int $categoryId = null)
+    {
+        $qb = $this->createQueryBuilder('j')
+            ->where('j.expires_at > :date')
+            ->setParameter('date', new \DateTime())
+            ->orderBy('j.expires_at', 'DESC');
+
+        if ($categoryId) {
+            $qb->andWhere('j.category = :categoryId')
+                ->setParameter('categoryId', $categoryId);
+        }
+
+        return $qb->getQuery()->getResult();
+    }
 }

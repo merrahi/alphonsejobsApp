@@ -6,6 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\JobRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Job
 {
@@ -295,5 +296,20 @@ class Job
         $this->category = $category;
 
         return $this;
+    }
+
+
+
+    /**
+    * @ORM\PrePersist()
+    */
+    public function prePersist()
+    {
+        $this->created_at = new \DateTime();
+        $this->updated_at = new \DateTime();
+
+        if (!$this->expires_at) {
+            $this->expires_at = (clone $this->created_at)->modify('+50 days');
+        }
     }
 }

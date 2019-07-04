@@ -16,7 +16,7 @@ class JobController extends AbstractController
     public function listAction():Response
     {
        
-        $jobs=$this->getDoctrine()->getRepository(Job::class)->findAll();
+        $jobs=$this->getDoctrine()->getRepository(Job::class)->findActiveJobs();
         
         return $this->render('job\list.html.twig',[
             'jobs'=>$jobs
@@ -28,10 +28,29 @@ class JobController extends AbstractController
     public function show($id)
     {
         $job=$this->getDoctrine()->getRepository(Job::class)->find($id);
+        if (null === $job) {
+            throw new NotFoundHttpException();
+        }
 
         return $this->render('job\show.html.twig',[
             'job'=>$job
         ]);
 
     }
+     /**
+     * @Route("job/edit/{id}",name="job_edit",requirements={"id"="\d+"})
+     */
+    public function edit($id)
+    {
+        $job=$this->getDoctrine()->getRepository(Job::class)->find($id);
+        if (null === $job) {
+            throw new NotFoundHttpException();
+        }
+
+        return $this->render('job\edit.html.twig',[
+            'job'=>$job
+        ]);
+
+    }
+    
 }
