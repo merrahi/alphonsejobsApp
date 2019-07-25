@@ -75,7 +75,7 @@ class JobController extends AbstractController
     /**
      * Finds and displays a job entity.
      *
-     * @Route("/{id}", name="job.show")
+     * @Route("/job/{id}", name="job.show")
      *
      * @param Job $job
      *
