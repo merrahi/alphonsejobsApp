@@ -35,7 +35,7 @@ class JobController extends AbstractController
      /**
      * Creates a new job entity.
      *
-     * @Route("/job/create", name="job.create", methods={"GET", "POST"})
+     * @Route("admin/job/create", name="job.create", methods={"GET", "POST"})
      *
      * @param Request $request
      * @param EntityManagerInterface $em

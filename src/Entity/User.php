@@ -82,6 +82,7 @@ class User implements UserInterface
 
     /**
      * @see UserInterface
+     * @return string 
      */
     public function getPassword(): string
     {

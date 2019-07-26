@@ -3,9 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}YourJob!{% endblock %}</title>
-        
-          <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
+       
+        <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('vendor/1-col-portfolio.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendor/radiostyle.css') }}">
+
+        
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
@@ -14,7 +17,9 @@
                 <img src="{{ asset('images/alphonse.png' ) }}" width="30" height="30" alt="">
             </a>
              <div>
-                <a href="{{path('job.create')}}" class="btn btn-default navbar-btn">Post a Job</a>
+             {% if is_granted('ROLE_ADMIN') %}
+                     <a href="{{path('job.create')}}" class="btn btn-default navbar-btn">Post a Job</a>
+             {% endif %}               
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">

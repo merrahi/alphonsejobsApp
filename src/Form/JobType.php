@@ -34,7 +34,7 @@ class JobType extends AbstractType
                        new NotBlank(),
             ],
             'attr'  => [
-                'class' => 'form-group row'
+                'class' => 'form-check'
             ],
         ])
         ->add('company', TextType::class,[
@@ -51,7 +51,10 @@ class JobType extends AbstractType
             'required' => false,
             'constraints' => [
                 new Image(),
-            ]
+            ],
+            'attr'  => [
+                'class' => 'form-control form-control-lg'
+            ],
         ])
         ->add('url', UrlType::class,[
             'required' => false,
@@ -124,7 +127,7 @@ class JobType extends AbstractType
             'class' => Category::class,
             'choice_label' => 'name',
             'attr'  => [
-                'class' => 'form-control form-control-lg'
+                'class' => 'form-group form-control form-control-lg'
             ],
             'constraints'=>[
                 new NotBlank(),
