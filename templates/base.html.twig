@@ -19,7 +19,14 @@
              <div>
              {% if is_granted('ROLE_ADMIN') %}
                      <a href="{{path('job.create')}}" class="btn btn-default navbar-btn">Post a Job</a>
-             {% endif %}               
+                     <a href="{{path('app_logout')}}" class="btn btn-default navbar-btn">logout</a>
+             {% else %}
+                 <a href="{{path('app_register')}}" class="btn btn-default navbar-btn">Register</a>
+                 <a href="{{path('app.login')}}" class="btn btn-default navbar-btn">login</a>
+             {% endif %}
+                 {% if is_granted('ROLE_ADMIN') %}
+               {% endif %}
+
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
