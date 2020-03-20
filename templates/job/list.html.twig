@@ -2,23 +2,25 @@
 
 {% block body %}
    <h1 class="my-4">Liste des offres</h1>
-
-    {% for job in jobs %}
-        <div class="row">
-            <div class="col-md-7">
-                <a href="#">
-                    <img height="200px" width="200px" class="img-thumbnail"   src="{{ asset('images/' ~ job.logo) }}" alt="{{ job.company }}"> 
-                </a>
+    {% for categorie in categories %}
+        <h2 class="h1">{{ categorie.name |capitalize  }}</h2>
+        {% for job in categorie.jobs %}
+            <div class="row">
+                <div class="col-md-7">
+                    <a href="#">
+                        <img height="200px" width="200px" class="img-thumbnail"   src="{{ asset('images/' ~ job.logo) }}" alt="{{ job.company }}">
+                    </a>
+                </div>
+                <div class="col-md-5">
+                    <h3>{{ job.position }}</h3>
+                    <p>{{ job.description }}</p>
+                    <p>Posted on {{ job.createdAt|date("m/d/Y") }}</p>
+                    <a class="btn btn-primary" href="{{ path('job.show', { 'id': job.id }) }}">See more</a>
+                </div>
             </div>
-            <div class="col-md-5">
-                <h3>{{ job.position }}</h3>
-                <p>{{ job.description }}</p>
-                <p>Posted on {{ job.createdAt|date("m/d/Y") }}</p>
-                <a class="btn btn-primary" href="{{ path('job.show', { 'id': job.id }) }}">See more</a>
-            </div>
-        </div>
 
-        <hr>
+            <hr>
+        {% endfor %}
     {% endfor %}
 
     <ul class="pagination justify-content-center">

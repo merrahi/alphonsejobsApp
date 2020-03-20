@@ -9,7 +9,13 @@
         <link rel="stylesheet" href="{{ asset('vendor/radiostyle.css') }}">
 
         
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            {# 'app' must match the first argument to addEntry() in webpack.config.js #}
+            {{ encore_entry_link_tags('app') }}
+
+            <!-- Renders a link tag (if your module requires any CSS)
+                 <link rel="stylesheet" href="/build/app.css"> -->
+        {% endblock %}
     </head>
     <body>
         <nav class="navbar navbar-light bg-light">
@@ -44,6 +50,12 @@
      <script src="{{ asset('vendor/jquery/jquery-3.2.1.slim.min.js') }}"></script>
         <script src="{{ asset('vendor/popper/popper.min.js') }}"></script>
         <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+
+            <!-- Renders app.js & a webpack runtime.js file
+                <script src="/build/runtime.js"></script>
+                <script src="/build/app.js"></script> -->
+        {% endblock %}
     </body>
 </html>

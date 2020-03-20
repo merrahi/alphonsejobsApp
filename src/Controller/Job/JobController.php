@@ -2,6 +2,7 @@
 // src/Controller/Job/JobController.php
 namespace App\Controller\Job;
 
+use App\Entity\Category;
 use App\Service\FileLoader;
 use App\Entity\Job;
 use App\Form\JobType;
@@ -27,9 +28,11 @@ class JobController extends AbstractController
     public function list() : Response
     {
         $jobs = $this->getDoctrine()->getRepository(Job::class)->findAll();
+        $cotegories = $this->getDoctrine()->getRepository(Category::class)->findWithActiveJobs();
 
         return $this->render('job/list.html.twig', [
             'jobs' => $jobs,
+            'categories' => $cotegories
         ]);
     }
      /**

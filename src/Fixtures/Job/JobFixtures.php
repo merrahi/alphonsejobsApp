@@ -32,9 +32,26 @@ class JobFixtures extends Fixture
             $job->setCreatedAt(new \DateTime());
             $job->setExpiresAt(date_modify(new \DateTime(), '+50 day'));
             $job->setUpdatedAt(date_modify(new \DateTime(), '+10 day'));
-            $job->setCategory($this->getReference(Category::class.'_Graphisme'));
+            $job->setCategory($this->getReference('category-graphisme'));
             //dd($job);
             //$job->getCategory()->setName("Informatique");
+            $manager->persist($job);
+        }
+        for ($i = 100; $i <= 130; $i++)
+        {
+            $job = new Job();  //$this->getReference(UserFixtures::ADMIN_USER_REFERENCE
+            $job->setCategory($this->getReference('category-programming'));
+            $job->setType('full-time');
+            $job->setCompany('Company ' . $i);
+            $job->setPosition('Web Developer');
+            $job->setLocation('Paris, France');
+            $job->setDescription('Lorem ipsum dolor sit amet, consectetur adipisicing elit.');
+            $job->setHowToApply('Send your resume to lorem.ipsum [at] dolor.sit');
+            $job->setIsPublic(true);
+            $job->setIsValidated(true);
+            $job->setToken('job_' . $i);
+            $job->setEmail('job'.$i.'@example.com');
+
             $manager->persist($job);
         }
 
