@@ -21,10 +21,14 @@ Encore
      * (including one that's included on every page - e.g. "app")
      *
      * Each entry will result in one JavaScript file (e.g. app.js)
-     * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
+     * and one CSS file (e.g. app.scss) if your JavaScript imports CSS.
      */
-    .addEntry('app', './assets/js/app.js')
-    //.addEntry('page1', './assets/js/page1.js')
+    .addEntry('js/app', './assets/js/app.js')
+    .addStyleEntry('css/app','./assets/css/app.scss')
+    .addStyleEntry('css/_layout','./assets/css/_layout.scss')
+    .addStyleEntry('css/_media-qyery','./assets/css/_media-query.scss')
+    .addStyleEntry('css/job/list','./assets/css/job/list.scss')
+    //.Entry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
@@ -55,7 +59,7 @@ Encore
 
 
     // enables Sass/SCSS support
-    //.enableSassLoader()
+    .enableSassLoader()
 
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()
@@ -70,6 +74,7 @@ Encore
     // uncomment if you use API Platform Admin (composer req api-admin)
     //.enableReactPreset()
     //.addEntry('admin', './assets/js/admin.js')
+
 ;
 
 var config = Encore.getWebpackConfig()

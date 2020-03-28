@@ -1,0 +1,28 @@
+// css/job/list.scss
+
+
+// import media
+@import "../_media-query";
+
+.categories h2{
+  background-color: #f8f9fa !important;
+}
+//desktop
+@include desktop-and-below{
+  .categoriesTitle{
+    position: relative;
+    background-color: #f8f9fa !important;
+  }
+  .categoriesTitle h2{
+    color: red;
+  }
+  .categoriesTitle h2>i{
+    position: absolute;
+    right: 0px;
+    padding: 3px 10px;
+  }
+}
+// Mobile
+@include mobile-only	{
+
+}
