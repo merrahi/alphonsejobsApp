@@ -24,6 +24,7 @@ Encore
      * and one CSS file (e.g. app.scss) if your JavaScript imports CSS.
      */
     .addEntry('js/app', './assets/js/app.js')
+    .addEntry('js/job/list', './assets/js/job/list.js')
     .addStyleEntry('css/app','./assets/css/app.scss')
     .addStyleEntry('css/_layout','./assets/css/_layout.scss')
     .addStyleEntry('css/_media-qyery','./assets/css/_media-query.scss')

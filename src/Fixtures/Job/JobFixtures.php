@@ -14,16 +14,17 @@ class JobFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
         $logos=['alphonse.png','sensiolabs.png','bouygues.jpg','huawei.png','orange.png'];
+        $city=['Evry','Paris','Lyon','Marseille','Nantes'];
         // create 5 Job! Bam!
         for ($i = 0; $i < 5; $i++) {
             $job = new Job();
-            $job->settype("Developpement web".$i);
+            $job->settype("Grpahic Designer".$i);
             $job->setCompany("Alphonse ".$i);  
             $job->setLogo($logos[$i]);    
             $job->setUrl($logos[$i]);    
-            $job->setPosition('Evry');
+            $job->setPosition($city[random_int(0, 4)]);
             $job->setLocation('Ile de france');
-            $job->setDescription('bababababab'.$i);
+            $job->setDescription('les tehcnologies demandés sont : Photoshop / Ilustator'.$i);
             $job->setHowToApply("to apply for this job you can click to :".$i);
             $job->setToken('Token'.mt_rand(10, 100));
             $job->setIsPublic(true);
@@ -43,9 +44,9 @@ class JobFixtures extends Fixture
             $job->setCategory($this->getReference('category-programming'));
             $job->setType('full-time');
             $job->setCompany('Company ' . $i);
-            $job->setPosition('Web Developer');
+            $job->setPosition($city[random_int(0, 4)]);
             $job->setLocation('Paris, France');
-            $job->setDescription('Lorem ipsum dolor sit amet, consectetur adipisicing elit.');
+            $job->setDescription('Lorem ipsum dolor sit amet, consectetur adipisicing elit.'.$i);
             $job->setHowToApply('Send your resume to lorem.ipsum [at] dolor.sit');
             $job->setIsPublic(true);
             $job->setIsValidated(true);

@@ -24,13 +24,14 @@ class CategoryRepository extends ServiceEntityRepository
      */
     public function findWithActiveJobs()
     {
-        return $this->createQueryBuilder('c')
+         return $this->createQueryBuilder('c')
             ->select('c')
-            ->innerJoin('c.jobs', 'j')
+            /*->innerJoin('c.jobs', 'j')
             ->where('j.expires_at > :date')
-            ->setParameter('date', new \DateTime())
+            ->setParameter('date', new \DateTime())*/
             ->getQuery()
             ->getResult();
+
     }
 
     // /**

@@ -1,0 +1,16 @@
+{% for job in jobs %}
+    <div class="job row">
+        <div class="col-md-7">
+            <a href="#">
+                <img height="200px" width="200px" class="img-thumbnail"   src="{{ asset('images/' ~ job.logo) }}" alt="{{ job.company }}">
+            </a>
+        </div>
+        <div class="col-md-5">
+            <h3>{{ job.position }}</h3>
+            <p>{{ job.description }}</p>
+            <p>Posted on {{ job.createdAt|date("m/d/Y") }}</p>
+            <a class="btn btn-primary" href="{{ path('job.show', { 'id': job.id }) }}">See more</a>
+        </div>
+    </div>
+    <hr>
+{% endfor %}

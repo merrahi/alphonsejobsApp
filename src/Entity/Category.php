@@ -83,7 +83,6 @@ class Category
                 $job->setCategory(null);
             }
         }
-
         return $this;
     }
 

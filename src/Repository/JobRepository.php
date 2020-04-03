@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Entity\Category;
 use App\Entity\Job;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -18,6 +19,20 @@ class JobRepository extends ServiceEntityRepository
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Job::class);
+    }
+    /**
+     * @return Jobs[]
+     */
+    public function findJobsBycategory(Category $category)
+    {
+        return $this->createQueryBuilder('j')
+            ->select('j')
+            ->where('j.expires_at > :date')
+            ->setParameter('date', new \DateTime())
+            ->where('j.category = :cat')
+            ->setParameter('cat', $category)
+            ->getQuery()
+            ->getResult();
     }
 
     // /**
