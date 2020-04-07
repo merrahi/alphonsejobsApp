@@ -18,9 +18,9 @@
                         <p>{{ affiliate.url }}</p>
                         <p>{{ affiliate.email }}</p>
                         {% if affiliate.isActive == true %}
-                            <p>{{ affiliate.isActive }}Active</p>
+                            <p>Active</p>
                         {% else %}
-                            <p>{{ affiliate.isActive }} Non Active</p>
+                            <p>Non Active</p>
                         {% endif %}
                         <p>Posted on {{ affiliate.createAt|date("m/d/Y") }}</p>
                         <a  class="btn btn-primary activeState {% if affiliate.isActive == true %} disabledButton {% endif %} " id="activeState{{ affiliate.id }}" {% if affiliate.isActive %} disabled="true" {% endif %} data-path="{{ path('affiliate.active', { 'id': affiliate.id }) }}">

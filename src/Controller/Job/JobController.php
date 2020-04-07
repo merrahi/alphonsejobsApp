@@ -83,11 +83,11 @@ class JobController extends AbstractController
         $cat=$request->query->getInt('cat');
 
         // set in cache categorie
-       $categorie = $cache->get('my_cache_key', function (ItemInterface $item) use ($cat) {
+       /*$categorie = $cache->get('my_cache_key', function (ItemInterface $item) use ($cat) {
             $item->expiresAfter(3600);
             return $this->getDoctrine()->getRepository(Category::class)->find($cat);
-        });
-        //$categorie = $this->getDoctrine()->getRepository(Category::class)->find($cat);
+        });*/
+        $categorie = $this->getDoctrine()->getRepository(Category::class)->find($cat);
         //$data=array();
         $jobs=$paginator->paginate(
                 $categorie->getJobs(), // Requête contenant les données à paginer (ici jobs)
