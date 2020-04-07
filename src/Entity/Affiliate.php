@@ -29,7 +29,9 @@ class Affiliate
     private $email;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @var string
+     *
+     * @ORM\Column(type="string", length=255, unique=true)
      */
     private $token;
 

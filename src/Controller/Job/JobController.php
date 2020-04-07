@@ -88,8 +88,6 @@ class JobController extends AbstractController
             return $this->getDoctrine()->getRepository(Category::class)->find($cat);
         });
         //$categorie = $this->getDoctrine()->getRepository(Category::class)->find($cat);
-        dd($categorie);
-
         //$data=array();
         $jobs=$paginator->paginate(
                 $categorie->getJobs(), // Requête contenant les données à paginer (ici jobs)

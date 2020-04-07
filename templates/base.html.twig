@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+
         <meta charset="UTF-8">
         <title>{% block title %}YourJob!{% endblock %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,7 +25,9 @@
                 <img src="{{ asset('images/alphonse.png' ) }}" width="30" height="30" alt="">
             </a>
              <div>
+                 <a href="{{path('affiliate.create')}}" class="btn btn-default navbar-btn">Become Affiliate</a>
              {% if is_granted('ROLE_ADMIN') %}
+                     <a href="{{path('affiliate.list')}}" class="btn btn-default navbar-btn">Affiliates</a>
                      <a href="{{path('job.create')}}" class="btn btn-default navbar-btn">Post a Job</a>
                      <a href="{{path('app_logout')}}" class="btn btn-default navbar-btn">logout</a>
              {% else %}
@@ -48,9 +51,6 @@
     <div class="container">
         {% block body %}{% endblock %}
     </div>
-     <script src="{{ asset('vendor/jquery/jquery-3.2.1.slim.min.js') }}"></script>
-        <script src="{{ asset('vendor/popper/popper.min.js') }}"></script>
-        <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
         {% block javascripts %}
             {{ encore_entry_script_tags('js/app') }}
 

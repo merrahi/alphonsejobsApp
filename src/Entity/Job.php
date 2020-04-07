@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\Validator\Constraints as Assert;
 
 
 /**
@@ -66,6 +67,7 @@ class Job
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @Assert\Regex("/^\w+/")
      */
     private $how_to_apply;
 
@@ -86,11 +88,14 @@ class Job
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Regex("/^[-+.\w]{1,64}@[-.\w]{1,64}\.[-.\w]{2,6}$/")
+     *
      */
     private $email;
 
     /**
      * @ORM\Column(type="datetime")
+     * @Assert\DateTime
      */
     private $expires_at;
 
@@ -101,6 +106,7 @@ class Job
 
     /**
      * @ORM\Column(type="datetime")
+     *
      */
     private $updated_at;
 

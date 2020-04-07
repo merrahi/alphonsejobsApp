@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    Affiliates
+{% endblock %}
+ {% block stylesheets %}
+     {# 'app' must match the first argument to addEntry() in webpack.config.js #}
+     {{ parent() }}
+     {{ encore_entry_link_tags('css/affiliate/list') }}
+ {% endblock %}
+
+{% block body %}
+    <h1 class="my-4">Affiliates List</h1>
+    <div class="affiliates">
+        <div class="affiliatesContent">
+            {% for affiliate in affiliates %}
+                <div class="affiliate row">
+                    <div class="col-md-5">
+                        <p>{{ affiliate.url }}</p>
+                        <p>{{ affiliate.email }}</p>
+                        {% if affiliate.isActive == true %}
+                            <p>{{ affiliate.isActive }}Active</p>
+                        {% else %}
+                            <p>{{ affiliate.isActive }} Non Active</p>
+                        {% endif %}
+                        <p>Posted on {{ affiliate.createAt|date("m/d/Y") }}</p>
+                        <a  class="btn btn-primary activeState {% if affiliate.isActive == true %} disabledButton {% endif %} " id="activeState{{ affiliate.id }}" {% if affiliate.isActive %} disabled="true" {% endif %} data-path="{{ path('affiliate.active', { 'id': affiliate.id }) }}">
+                            {% if affiliate.isActive %}
+                                Activated
+                            {% else %}
+                                Activate
+                            {% endif %}
+                        </a>
+                    </div>
+                </div>
+                <hr>
+            {% endfor %}
+        </div>
+        <div class="navigation">
+            {#  {{ knp_pagination_render(jobs) }}#}
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="previousPage page-link" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                </li>
+                <li class="page-item ">
+                    <a class="currentPage page-link"
+                       href="{{ path('affiliate.list', {'aff': 1}) }}">1</a>
+                </li>
+                <li class="page-item ">
+                    <a class="nextPage page-link" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </li>
+                <li class="page-item totalAffiliates">
+                        <span>{{ totalAffiliates~" Affiliates..." }}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    {% block javascripts %}
+        {{ parent() }}
+        {{ encore_entry_script_tags('js/affiliate/affiliate') }}
+
+        <!-- Renders app.js & a webpack runtime.js file
+            <script src="/build/runtime.js"></script>
+            <script src="/build/app.js"></script> -->
+    {% endblock %}
+{% endblock %}

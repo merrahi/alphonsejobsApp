@@ -1,0 +1,38 @@
+// css/affiliate/list.scss
+
+
+// import media
+@import "../_media-query";
+
+h1{
+  background-color: #f8f9fa !important;
+
+}
+//desktop
+@include desktop-and-below{
+  .navigation{
+    position: relative;
+  }
+  .totalAffiliates{
+    position: absolute;
+    right: 5px;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #245682;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+
+  }
+  .disabledButton{
+    pointer-events: none; //desactive the click
+    color: #FFF;
+    cursor: not-allowed;
+    opacity: .5;
+  }
+}
+// Mobile
+@include mobile-only	{
+
+}

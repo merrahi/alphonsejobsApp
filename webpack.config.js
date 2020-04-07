@@ -24,11 +24,13 @@ Encore
      * and one CSS file (e.g. app.scss) if your JavaScript imports CSS.
      */
     .addEntry('js/app', './assets/js/app.js')
+    .addEntry('js/affiliate/affiliate', './assets/js/affiliate/affiliate.js')
     .addEntry('js/job/list', './assets/js/job/list.js')
     .addStyleEntry('css/app','./assets/css/app.scss')
     .addStyleEntry('css/_layout','./assets/css/_layout.scss')
     .addStyleEntry('css/_media-qyery','./assets/css/_media-query.scss')
     .addStyleEntry('css/job/list','./assets/css/job/list.scss')
+    .addStyleEntry('css/affiliate/list','./assets/css/affiliate/list.scss')
     //.Entry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
 
