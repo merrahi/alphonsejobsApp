@@ -25,9 +25,9 @@ class JobUploaderListener
      */
     public function prePersist(LifecycleEventArgs $args)
     {
-       /* $entity = $args->getEntity();
+        $entity = $args->getEntity();
         $this->uploadFile($entity);
-        */
+
     }
     /**
      * @param PreUpdateEventArgs $args
@@ -55,12 +55,14 @@ class JobUploaderListener
         if (!$entity instanceof Job) {
             return;
         }
-        $logoFile = $entity->getLogo();
+        /** @var UploadedFile $logoFile */
+        $logoFile = $entity->getFile();
         // only upload new files
         if ($logoFile instanceof UploadedFile) {
             $fileName = $this->uploader->upload($logoFile);
             $entity->setLogo($fileName);
         }
+        return $fileName;
     }
     /**
      * @param $entity

@@ -53,7 +53,7 @@ class JobType extends AbstractType
                 new Image(),
             ],
             'attr'  => [
-                'class' => 'form-control form-control-lg'
+                'class' => 'form-control-file'
             ],
         ])
         ->add('url', UrlType::class,[

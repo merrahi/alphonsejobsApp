@@ -122,22 +122,22 @@ class JobController extends AbstractController
      *
      * @return RedirectResponse|Response
      */
-    public function create(Request $request, EntityManagerInterface $em,FileLoader $fileloader) : Response
+    public function create(Request $request, EntityManagerInterface $em) : Response
     {
         $job = new Job();
         $form = $this->createForm(JobType::class, $job);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-              
+
             /** @var UploadedFile|null $logoFile */
             $logoFile = $form->get('logo')->getData();
-
-            if ($logoFile instanceof UploadedFile) {
+            $job->setFile($logoFile);
+            /*if ($logoFile instanceof UploadedFile) {
                 $fileName = $fileloader->upload($logoFile);
 
                 $job->setLogo($fileName);
-            }
+            }*/
             $em->persist($job);
             $em->flush();
             $this->addFlash(

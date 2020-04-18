@@ -32,4 +32,5 @@ class FileLoader
          $file->move($this->targetDirectory, $fileName);
          return $fileName;
      }
+
 }

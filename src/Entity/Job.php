@@ -42,8 +42,14 @@ class Job
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     *
      */
     private $logo;
+
+    /**
+     * @Assert\Image()
+     */
+    private $file;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -145,13 +151,10 @@ class Job
 
         return $this;
     }
-    /**
-     * @return string|null|UploadedFile
-     */
+
     public function getLogo()
     {
         return $this->logo;
-        
     }
     /**
      * @param string|null|UploadedFile $logo
@@ -337,5 +340,25 @@ class Job
         if (!$this->expires_at) {
             $this->expires_at = (clone $this->created_at)->modify('+50 days');
         }
+    }
+
+    /**
+     * Sets file.
+     *
+     * @param UploadedFile $file
+     */
+    public function setFile(UploadedFile $file = null)
+    {
+        $this->file = $file;
+    }
+
+    /**
+     * Get file.
+     *
+     * @return UploadedFile
+     */
+    public function getFile()
+    {
+        return $this->file;
     }
 }
