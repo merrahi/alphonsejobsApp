@@ -5,7 +5,7 @@
 import $ from 'jquery';
 $(document).ready(function () {
     //hide content of categoriesContent
-    $(".categoriesContent").hide();
+    $("div.categoriesContent").not(":first").hide();
     $(".categoriesTitle").click(function () {
         $(".categoriesContent").slideUp();
         if($(this).find("i").hasClass("fa-chevron-up")){

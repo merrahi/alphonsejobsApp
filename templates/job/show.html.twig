@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    {{ dump(cityweather) }}
     <h1>Job</h1>
 
     <div class="media" style="margin-top: 60px;">
@@ -18,8 +19,15 @@
             <p>
                 <strong>{{ job.position }}</strong>
                 <small> - <i>{{ job.type }}</i></small>
-            </p>
 
+            </p>
+            <p class="vk_bk sol-tmp" style="margin-top:-3px;font-size:64px">
+                <img style="height:64px;width:64px" alt="Averses"
+                     src="//ssl.gstatic.com/onebox/weather/64/rain_light.png" id="wob_tci" data-atf="1">
+                <span class="wob_t" id="wob_tm"  style="display:inline"> {{ cityweather["main"]["temp"]-273.15|number_format }}</span>
+                <span class="wob_t" id="wob_ttm" style="display:none">50</span>
+                <span class="wob_t" aria-label="°Celsius" style="position: absolute; font-size: 20px; margin-top: 20px;" >°C</span>
+            </p>
             <p>{{ job.description|nl2br }}</p>
 
             <p style="margin-top: 40px;">

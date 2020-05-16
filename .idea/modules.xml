@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/alphonsejobsApp-master.iml" filepath="$PROJECT_DIR$/.idea/alphonsejobsApp-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../drupal.com/.idea/drupal.com.iml" filepath="$PROJECT_DIR$/../drupal.com/.idea/drupal.com.iml" />
     </modules>
   </component>
 </project>

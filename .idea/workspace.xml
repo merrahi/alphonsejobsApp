@@ -2,14 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a84f89b-4f6a-4d47-940c-fc461bdb05ff" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Service/ClientHTTP.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drupal.com/web/modules/custom/boatmanagement/boatmanagement.permissions.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drupal.com/web/modules/custom/boatmanagement/src/Form/ImportBoatForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drupal.com/web/modules/custom/boatmanagement/src/Plugin/views/filter/NodeTitle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drupal.com/web/modules/custom/boatmanagement/src/Plugin/views/style/cardStyle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drupal.com/web/modules/custom/boatmanagement/templates/form--boat-import-form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drupal.com/web/modules/custom/boatmanagement/templates/mymodule_cards_style.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/alphonsejobsApp-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/alphonsejobsApp-master.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/job/list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/job/list.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/job/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/job/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Job/JobController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Job/JobController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Job.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Job.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventListener/JobUploaderListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventListener/JobUploaderListener.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/JobType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/JobType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/FileLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/FileLoader.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/job/create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/job/create.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/job/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/job/list.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/job/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/job/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../orange_ecom_profile/config/install/block.block.pagetitle.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../orange_ecom_profile/config/install/block.block.pagetitle.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,107 +32,48 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/alphonsejobsApp-master/composer.json</pharConfigPath>
   </component>
+  <component name="DrupalConfiguration" enabled="true" version="8">
+    <drupalPath>C:\wamp64\www\drupal.com</drupalPath>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="list.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/affiliate/list.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="3" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JobUploaderListener.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/EventListener/JobUploaderListener.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
-              <folding>
-                <element signature="e#37#56#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileLoader.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Service/FileLoader.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="56" column="56" selection-start-line="56" selection-start-column="56" selection-end-line="56" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/job/list.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
-              <caret line="64" column="18" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/job/create.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
-              <folding>
-                <element signature="e#12#26#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="JobController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/Job/JobController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="140" column="31" selection-start-line="140" selection-start-column="31" selection-end-line="140" selection-end-column="31" />
+            <state relative-caret-position="181">
+              <caret line="106" column="61" selection-start-line="106" selection-start-column="53" selection-end-line="106" selection-end-column="61" />
               <folding>
-                <element signature="e#77#101#0#PHP" expanded="true" />
-                <element signature="e#3132#4875#0#PHP" />
+                <element signature="e#6286#6992#0#PHP" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Job.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Job.php">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5102">
-              <caret line="44" column="6" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="6" />
+            <state>
               <folding>
-                <element signature="e#30#62#0#PHP" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JobType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Form/JobType.php">
+      <file leaf-file-name="list.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/js/job/list.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="56" column="14" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
+            <state relative-caret-position="119">
+              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/css/job/list.scss">
+      <file leaf-file-name="AffiliateController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/Affiliate/AffiliateController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+            <state relative-caret-position="1598">
+              <caret line="110" column="61" selection-start-line="110" selection-start-column="48" selection-end-line="110" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -139,29 +91,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>registry=https://yarn.npmjs.org</find>
-      <find>scss-tokenizer@^0.2</find>
-      <find>yarn</find>
-      <find>dev-serve</find>
-      <find>33acxIJrHaFaAwq</find>
-      <find>findWithActiveJobs</find>
-      <find>alert</find>
-      <find>FilesystemAdapter</find>
-      <find>active</find>
-      <find>token</find>
-      <find>acti</find>
-      <find>page</find>
-      <find>is_active</find>
-      <find>create</find>
-      <find>show</find>
-      <find>job.list</find>
-      <find>$em</find>
-      <find>loa</find>
-      <find>reg</find>
-      <find>val</find>
-      <find>em</find>
-      <find>security</find>
-      <find>symfony/security-http</find>
       <find>&quot;symfony/security-http&quot;</find>
       <find>&quot;symfony/security-http&quot;:</find>
       <find>uploadFile</find>
@@ -169,9 +98,33 @@
       <find>flash</find>
       <find>logo</find>
       <find>list</find>
+      <find>settings</find>
+      <find>$settings['trusted_host_patterns']</find>
+      <find>calcul_aire_block</find>
+      <find>boatmanagement_theme</find>
+      <find>Drupal\Core\Form</find>
+      <find>$port</find>
+      <find>fichier_csv_import</find>
+      <find>debug</find>
+      <find>bootstrap_barrio_subtheme</find>
+      <find>parameters</find>
+      <find>gu</find>
+      <find>bootstrap_cdn</find>
+      <find />
+      <find>td</find>
+      <find>CDN</find>
+      <find>&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css&quot;</find>
+      <find>jquery</find>
+      <find>&quot;jquery&quot;</find>
+      <find>MailerService</find>
+      <find>$mailer</find>
+      <find>FileLoader</find>
+      <find>app-appareil-view</find>
+      <find>normalize(</find>
     </findStrings>
     <dirStrings>
       <dir>C:\wamp64\www\alphonsejobsApp-master</dir>
+      <dir>C:\wamp64\www\drupal.com\web\themes\barrio_custom</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -180,59 +133,63 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/css/_media_query.scss" />
-        <option value="$PROJECT_DIR$/assets/css/layout.scss" />
-        <option value="$PROJECT_DIR$/assets/css/_layout.scss" />
-        <option value="$PROJECT_DIR$/assets/css/_media-query.scss" />
-        <option value="$PROJECT_DIR$/assets/css/app.css" />
-        <option value="$PROJECT_DIR$/assets/css/app.scss" />
-        <option value="$PROJECT_DIR$/src/Entity/Category.php" />
-        <option value="$PROJECT_DIR$/config/packages/twig.yaml" />
-        <option value="$PROJECT_DIR$/src/Repository/JobRepository.php" />
-        <option value="$PROJECT_DIR$/assets/js/job/list.js.scss" />
-        <option value="$PROJECT_DIR$/src/Repository/CategoryRepository.php" />
-        <option value="$PROJECT_DIR$/templates/job/paginate.html.twig.html" />
-        <option value="$PROJECT_DIR$/templates/job/paginate.html.twig" />
-        <option value="$PROJECT_DIR$/src/Fixtures/Job/JobFixtures.php" />
-        <option value="$PROJECT_DIR$/templates/job/show.html.twig" />
-        <option value="$PROJECT_DIR$/templates/job/list.html.twig" />
-        <option value="$PROJECT_DIR$/assets/js/job/list.js" />
-        <option value="$PROJECT_DIR$/config/packages/cache.yaml" />
-        <option value="$PROJECT_DIR$/templates/affliate/lsite.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/affiliate/AffiliateController.php" />
-        <option value="$PROJECT_DIR$/templates/affliate/create.html.twig" />
-        <option value="$PROJECT_DIR$/config/packages/framework.yaml" />
-        <option value="$PROJECT_DIR$/templates/affiliate/create.html.twig" />
-        <option value="$PROJECT_DIR$/src/Form/AffiliateType.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Affiliate.php" />
-        <option value="$PROJECT_DIR$/templates/affiliate/wait.html.twig" />
-        <option value="$PROJECT_DIR$/templates/affiliate/lsite.html.twig" />
-        <option value="$PROJECT_DIR$/templates/emails/registration.html.twig" />
-        <option value="$PROJECT_DIR$/assets/js/app.js" />
-        <option value="$PROJECT_DIR$/assets/js/affiliate.js" />
-        <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/templates/base.html.twig" />
-        <option value="$PROJECT_DIR$/assets/js/affiliate/affiliate.js" />
-        <option value="$PROJECT_DIR$/src/Service/Mailer.php" />
-        <option value="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" />
-        <option value="$PROJECT_DIR$/src/Controller/Security/SecurityController.php" />
-        <option value="$PROJECT_DIR$/src/Controller/Affiliate/AffiliateController.php" />
-        <option value="$PROJECT_DIR$/src/Service/MailerService.php" />
-        <option value="$PROJECT_DIR$/assets/css/affiliate/list.scss" />
-        <option value="$PROJECT_DIR$/tests/Entity/JobTest.php" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/composer.lock" />
-        <option value="$PROJECT_DIR$/templates/affiliate/list.html.twig" />
-        <option value="$PROJECT_DIR$/tests/Controller/JobControllerTest.php" />
         <option value="$PROJECT_DIR$/src/Entity/Job.php" />
-        <option value="$PROJECT_DIR$/src/Controller/Job/JobController.php" />
         <option value="$PROJECT_DIR$/src/Service/FileLoader.php" />
         <option value="$PROJECT_DIR$/src/EventListener/JobUploaderListener.php" />
         <option value="$PROJECT_DIR$/src/Form/JobType.php" />
         <option value="$PROJECT_DIR$/assets/css/job/list.scss" />
         <option value="$PROJECT_DIR$/templates/job/create.html.twig" />
+        <option value="$PROJECT_DIR$/../orange_ecom_profile/config/install/block.block.pagetitle.yml" />
+        <option value="$PROJECT_DIR$/../drupal.com/web/sites/example.sites.php" />
+        <option value="$PROJECT_DIR$/../drupal.com/web/sites/example.settings.local.php" />
+        <option value="$PROJECT_DIR$/../drupal.com/web/modules/custom/boatmanagement/boatmanagement.permissions.yml" />
+        <option value="$PROJECT_DIR$/../drupal.com/web/modules/custom/boatmanagement/src/Plugin/Block/BoatBlock.php" />
+        <option value="$PROJECT_DIR$/../drupal.com/web/modules/custom/boatmanagement/boatmanagement.routing.yml" />
+        <option value="$PROJECT_DIR$/../drupal.com/web/modules/custom/boatmanagement/boatmanagement.module" />
+        <option value="$PROJECT_DIR$/../drupal.com/web/modules/custom/boatmanagement/src/Form/ImportBoatForm.php" />
+        <option value="$PROJECT_DIR$/../drupal.com/web/modules/custom/boatmanagement/src/Plugin/views/filter/NodeTitle.php" />
+        <option value="$PROJECT_DIR$/../drupal.com/web/modules/custom/boatmanagement/src/Plugin/views/style/cardStyle.php" />
+        <option value="$PROJECT_DIR$/../drupal.com/web/modules/custom/boatmanagement/templates/mymodule_cards_style.html.twig" />
+        <option value="$PROJECT_DIR$/../drupal.com/web/modules/custom/boatmanagement/boatmanagement.views.inc" />
+        <option value="$PROJECT_DIR$/../drupal.com/web/modules/custom/boatmanagement/templates/form--boat-import-form.html.twig" />
+        <option value="$PROJECT_DIR$/../drupal.com/web/themes/contrib/bootstrap_barrio/subtheme/color/preview.html" />
+        <option value="$PROJECT_DIR$/../drupal.com/web/themes/barrio_custom/barrio_custom.info.yml" />
+        <option value="$PROJECT_DIR$/../drupal.com/web/themes/barrio_custom/barrio_custom.libraries.yml" />
+        <option value="$PROJECT_DIR$/../gmao12/index.php" />
+        <option value="$PROJECT_DIR$/../gmao12/app/connect/conn.php" />
+        <option value="$PROJECT_DIR$/../gmao12/app/Model/ModelChefInf.php" />
+        <option value="$PROJECT_DIR$/../gmao12/app/View/base.php" />
+        <option value="$PROJECT_DIR$/../gmao12/app/View/ChefTechnicien/edit/full.php" />
+        <option value="$PROJECT_DIR$/../gmao12/app/Controller/ControllerChefTs.php" />
+        <option value="$PROJECT_DIR$/../gmao12/app/Controller/Index.php" />
+        <option value="$PROJECT_DIR$/../gmao12/app/Model/Modeldi.php" />
+        <option value="$PROJECT_DIR$/../gmao12/app/View/ChefTechnicien/listDI.php" />
+        <option value="$PROJECT_DIR$/../gmao12/app/View/ChefTechnicien/detailDI.php" />
+        <option value="$PROJECT_DIR$/../gmao12/app/View/ChefTechnicien/listeq.php" />
+        <option value="$PROJECT_DIR$/../gmao12/app/View/header.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/templates/job/list.html.twig" />
+        <option value="$PROJECT_DIR$/src/Service/ClientHTTP.php" />
+        <option value="$PROJECT_DIR$/config/services.yaml" />
+        <option value="$PROJECT_DIR$/src/Controller/Job/JobController.php" />
+        <option value="$PROJECT_DIR$/templates/job/show.html.twig" />
+        <option value="$PROJECT_DIR$/../angular-pr/src/app/appareil/appareil.component.html" />
+        <option value="$PROJECT_DIR$/../ecomfati/ecomfati/app/view/Login.php" />
+        <option value="$PROJECT_DIR$/../ecomfati/ecomfati/app/model/modellogin.php" />
+        <option value="$PROJECT_DIR$/../ecomfati/ecomfati/app/controller/controlelogin.php" />
+        <option value="$PROJECT_DIR$/../ecomfati/app/controller/index.php" />
+        <option value="$PROJECT_DIR$/../ecomfati/app/view/Login.php" />
+        <option value="$PROJECT_DIR$/../ecomfati/app/controller/controleprod.php" />
+        <option value="$PROJECT_DIR$/../ecomfati/app/view/listprod.php" />
+        <option value="$PROJECT_DIR$/../ecomfati/app/controller/controlelogin.php" />
+        <option value="$PROJECT_DIR$/assets/js/job/list.js" />
       </list>
     </option>
+  </component>
+  <component name="JoomlaConfiguration">
+    <joomlaConfigPath />
+    <joomlaPath />
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -251,12 +208,16 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/package.json" />
+      <path value="$PROJECT_DIR$/../drupal.com/vendor/twbs/bootstrap/package.json" />
+      <path value="$PROJECT_DIR$/../drupal.com/web/core/assets/vendor/jquery.ui/package.json" />
+      <path value="$PROJECT_DIR$/../drupal.com/web/core/package.json" />
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="1152" />
+    <option name="x" value="-74" />
+    <option name="y" value="181" />
+    <option name="width" value="1378" />
+    <option name="height" value="713" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -280,43 +241,21 @@
               <item name="alphonsejobsApp-master" type="b2602c69:ProjectViewProjectNode" />
               <item name="alphonsejobsApp-master" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="alphonsejobsApp-master" type="b2602c69:ProjectViewProjectNode" />
               <item name="alphonsejobsApp-master" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="affiliate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="alphonsejobsApp-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="alphonsejobsApp-master" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="job" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alphonsejobsApp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alphonsejobsApp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alphonsejobsApp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alphonsejobsApp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alphonsejobsApp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alphonsejobsApp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alphonsejobsApp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alphonsejobsApp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="uploads" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alphonsejobsApp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alphonsejobsApp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="uploads" type="462c0819:PsiDirectoryNode" />
-              <item name="jobs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="alphonsejobsApp-master" type="b2602c69:ProjectViewProjectNode" />
@@ -328,6 +267,13 @@
               <item name="alphonsejobsApp-master" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="alphonsejobsApp-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="alphonsejobsApp-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+              <item name="Affiliate" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="alphonsejobsApp-master" type="b2602c69:ProjectViewProjectNode" />
@@ -335,53 +281,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
               <item name="Job" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alphonsejobsApp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alphonsejobsApp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alphonsejobsApp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alphonsejobsApp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="EventListener" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alphonsejobsApp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alphonsejobsApp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Form" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alphonsejobsApp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alphonsejobsApp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Security" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alphonsejobsApp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alphonsejobsApp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alphonsejobsApp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alphonsejobsApp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alphonsejobsApp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alphonsejobsApp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="affiliate" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alphonsejobsApp-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alphonsejobsApp-master" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="job" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -394,19 +293,24 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SearchEverywhereHistoryKey" value="UploadedFile.php&#9;FILE&#9;file://C:/wamp64/www/alphonsejobsApp-master/vendor/symfony/http-foundation/File/UploadedFile.php&#10;symfony/security-http&#9;FILE&#9;file://C:/wamp64/www/alphonsejobsApp-master/vendor/symfony/security-http&#10;phpunit.xml.dist&#9;FILE&#9;file://C:/wamp64/www/alphonsejobsApp-master/phpunit.xml.dist&#10;.env&#9;FILE&#9;file://C:/wamp64/www/alphonsejobsApp-master/.env&#10;framework&#9;FILE&#9;file://C:/wamp64/www/alphonsejobsApp-master/config/packages/framework.yaml&#10;base&#9;FILE&#9;file://C:/wamp64/www/alphonsejobsApp-master/templates/base.html.twig&#10;list&#9;FILE&#9;file://C:/wamp64/www/alphonsejobsApp-master/templates/job/list.html.twig&#10;twig.ya&#9;FILE&#9;file://C:/wamp64/www/alphonsejobsApp-master/config/packages/twig.yaml&#10;package-lock.json&#9;FILE&#9;file://C:/wamp64/www/alphonsejobsApp-master/package-lock.json&#10;css/bootstrap.min.css&#9;FILE&#9;file://C:/wamp64/www/alphonsejobsApp-master/public/vendor/bootstrap/css/bootstrap.min.css&#10;vendor\symfony\error-handler\ErrorRenderer/&#9;FILE&#9;file://C:/wamp64/www/alphonsejobsApp-master/vendor/symfony/error-handler/ErrorRenderer&#10;vendor\symfony\error-handler\Resources\&#9;FILE&#9;file://C:/wamp64/www/alphonsejobsApp-master/vendor/symfony/error-handler/Resources&#10;Resources&#9;FILE&#9;file://C:/wamp64/www/alphonsejobsApp-master/vendor/doctrine/doctrine-bundle/Resources&#10;webpack.config.js&#9;FILE&#9;file://C:/wamp64/www/alphonsejobsApp-master/webpack.config.js&#10;config/packages/webpack_encore.yaml&#9;null&#9;null&#10;DefinitionErrorExceptionPass.php&#9;FILE&#9;file://C:/wamp64/www/alphonsejobsApp-master/vendor/symfony/dependency-injection/Compiler/DefinitionErrorExceptionPass.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../drupal.com" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ecomfati" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/../angular-pr/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\alphonsejobsApp-master\src\Service" />
+      <recent name="C:\wamp64\www\drupal.com\web\themes" />
+      <recent name="C:\wamp64\www\drupal.com\web\modules\custom\boatmanagement\templates" />
+      <recent name="C:\wamp64\www\drupal.com\web\modules\custom\boatmanagement" />
       <recent name="C:\wamp64\www\alphonsejobsApp-master\templates\affliate" />
-      <recent name="C:\wamp64\www\alphonsejobsApp-master\src\Form" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\drupal.com\web\librairies" />
       <recent name="C:\wamp64\www\alphonsejobsApp-master\assets\js\affiliate" />
       <recent name="C:\wamp64\www\alphonsejobsApp-master\templates\affiliate" />
     </key>
@@ -474,34 +378,53 @@
       <workItem from="1586794393837" duration="599000" />
       <workItem from="1586811752689" duration="737000" />
       <workItem from="1586870299991" duration="14337000" />
+      <workItem from="1587237598755" duration="993000" />
+      <workItem from="1587308848503" duration="3598000" />
+      <workItem from="1587369067382" duration="10366000" />
+      <workItem from="1587453318640" duration="21354000" />
+      <workItem from="1587543093837" duration="9956000" />
+      <workItem from="1587601597194" duration="3826000" />
+      <workItem from="1587650880147" duration="15220000" />
+      <workItem from="1587666846511" duration="734000" />
+      <workItem from="1587911863885" duration="1001000" />
+      <workItem from="1588201744017" duration="6100000" />
+      <workItem from="1588258594047" duration="6083000" />
+      <workItem from="1588462990213" duration="2798000" />
+      <workItem from="1588607386736" duration="8283000" />
+      <workItem from="1588781280531" duration="14621000" />
+      <workItem from="1588986920395" duration="668000" />
+      <workItem from="1589235716021" duration="657000" />
+      <workItem from="1589408597759" duration="2758000" />
+      <workItem from="1589583204218" duration="2551000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="264107000" />
+    <option name="totallyTimeSpent" value="375674000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24450952" />
       <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5080527" side_tool="true" weight="0.31181103" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5329429" side_tool="true" visible="true" weight="0.2551181" />
+      <window_info anchor="right" id="Database" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49926794" weight="0.32913387" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49926794" weight="0.32913387" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4919473" visible="true" weight="0.3464567" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25549048" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="0" />
-      <window_info anchor="bottom" id="Find" order="2" sideWeight="0.49926794" weight="0.32913387" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4670571" visible="true" weight="0.2551181" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="2" sideWeight="0.49926794" weight="0.32913387" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="1" />
     </layout>
   </component>
@@ -521,305 +444,287 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="WordPressConfiguration">
+    <wordpressPath />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/Controller/Job/JobController.php</url>
-          <line>124</line>
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/webpack.config.js</url>
           <line>82</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="7" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/emails/registration.html.twig">
+    <entry file="file://$PROJECT_DIR$/../gmao12/app/View/ChefTechnicien/listeq.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/app.js">
+    <entry file="file://$PROJECT_DIR$/../gmao12/app/View/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/build/js/app.js" />
-    <entry file="file://$PROJECT_DIR$/public/build/js/affiliate.js" />
-    <entry file="file://$PROJECT_DIR$/assets/js/job/list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-577">
-          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/build/js/job/list.js" />
-    <entry file="file://$PROJECT_DIR$/public/build/runtime.js" />
-    <entry file="file://$PROJECT_DIR$/public/build/js/affiliate/affiliate.js" />
-    <entry file="file://$PROJECT_DIR$/templates/affiliate/wait.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Affiliate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1836">
-          <caret line="110" column="29" selection-start-line="110" selection-start-column="23" selection-end-line="110" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/affiliate/affiliate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/AffiliateType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="67" column="39" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="84" column="53" selection-start-line="84" selection-start-column="53" selection-end-line="84" selection-end-column="53" />
+        <state relative-caret-position="17">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/Security/SecurityController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="67" column="21" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/affiliate/list.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Affiliate/AffiliateController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
-        </state>
+        <state relative-caret-position="-663" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="20" />
+        <state relative-caret-position="51">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.lock">
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="4566" column="64" selection-start-line="4566" selection-start-column="64" selection-end-line="4566" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phpunit.xml.dist">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+        <state relative-caret-position="272">
+          <caret line="34" column="48" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+        <state relative-caret-position="340">
+          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Entity/JobTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="92" column="5" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
-          <folding>
-            <element signature="e#103#122#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/bundles.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/test-pack/composer.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Controller/JobControllerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Service/MailerService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-          <folding>
-            <element signature="e#30#55#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/services.yaml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/uploads/jobs/alphonse.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/uploads/jobs/bouygues.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/uploads/jobs/sensiolabs.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/uploads/jobs/orange.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/uploads/jobs/Huawei.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/uploads/jobs/f9dfd0e33ded6c70ea28.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/uploads/jobs/86193d833396400b6b9c.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/uploads/jobs/5d7f3ece03e6dad95066.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EventListener/JobTokenListener.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-          <folding>
-            <element signature="e#36#55#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Job/JobController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="140" column="31" selection-start-line="140" selection-start-column="31" selection-end-line="140" selection-end-column="31" />
-          <folding>
-            <element signature="e#77#101#0#PHP" expanded="true" />
-            <element signature="e#3132#4875#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/http-foundation/File/UploadedFile.php">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="56" column="56" selection-start-line="56" selection-start-column="56" selection-end-line="56" selection-end-column="56" />
+        <state relative-caret-position="867">
+          <caret line="51" column="38" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/uploads/jobs/5a9e028fc7f61dd691bb.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/uploads/jobs/73bb6be952d09e8f1bd9.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/uploads/jobs/3e23feadf1b0e46bdf71.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Service/FileLoader.php">
+    <entry file="file://$PROJECT_DIR$/templates/registration/register.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EventListener/JobUploaderListener.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
-          <folding>
-            <element signature="e#37#56#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Job.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5102">
-          <caret line="44" column="6" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="6" />
-          <folding>
-            <element signature="e#30#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/JobType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="56" column="14" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/job/list.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/job/list.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="64" column="18" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
+        <state relative-caret-position="272">
+          <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/affiliate/list.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Service/FileLoader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="3" selection-end-column="14" />
+        <state relative-caret-position="85">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/job/create.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Service/MailerService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Service/ClientHTTP.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/services.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/job/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="26" column="110" selection-start-line="26" selection-start-column="110" selection-end-line="26" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../angular-api/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../angular-api/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../angular-pr/src/app/new-user/new-user.component.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../angular-pr/src/app/new-user/new-user.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../angular-pr/src/app/services/user.service.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../angular-pr/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-709" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../angular-pr/src/app/appareil-view/appareil-view.component.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../angular-pr/src/app/user-list/user-list.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../angular-pr/src/app/four-oh-four/four-oh-four.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../angular-pr/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../angular-pr/src/app/appareil/appareil.component.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../angular-pr/src/app/appareil/appareil.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="3" selection-start-column="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../angular-pr/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-46" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../angular-pr/src/app/models/User.model.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../angular-pr/src/app/four-oh-four/four-oh-four.component.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../angular-pr/src/app/four-oh-four/four-oh-four.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../angular-pr/src/app/services/appareil.service.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../angular-pr/src/app/appareil/appareil.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../angular-pr/src/app/appareil-view/appareil-view.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../angular-pr/src/app/appareil-view/appareil-view.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ecomfati/ecomfati/index.php" />
+    <entry file="file://$PROJECT_DIR$/../ecomfati/ecomfati/app/model/modellogin.php" />
+    <entry file="file://$PROJECT_DIR$/../ecomfati/ecomfati/app/controller/controleprod.php" />
+    <entry file="file://$PROJECT_DIR$/../ecomfati/ecomfati/app/view/Login.php" />
+    <entry file="file://$PROJECT_DIR$/../ecomfati/ecomfati/app/controller/controlelogin.php" />
+    <entry file="file://$PROJECT_DIR$/../ecomfati/ecomfati/app/controller/index.php" />
+    <entry file="file://$PROJECT_DIR$/../ecomfati/app/controller/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="13" column="37" lean-forward="true" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ecomfati/app/view/listprod.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ecomfati/app/view/Login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ecomfati/app/controller/controleprod.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ecomfati/app/controller/controlelogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../angular-pr/src/app/auth/auth.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../angular-pr/src/app/auth/auth.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Affiliate/AffiliateController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1598">
+          <caret line="110" column="61" selection-start-line="110" selection-start-column="48" selection-end-line="110" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Job/JobController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="106" column="61" selection-start-line="106" selection-start-column="53" selection-end-line="106" selection-end-column="61" />
           <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="e#6286#6992#0#PHP" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/job/list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
         </state>
       </provider>
     </entry>

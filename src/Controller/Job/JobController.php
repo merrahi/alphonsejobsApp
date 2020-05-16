@@ -7,6 +7,7 @@ use App\Service\FileLoader;
 use App\Entity\Job;
 use App\Form\JobType;
 use Symfony\Component\Cache\Adapter\FilesystemAdapter;
+use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
@@ -25,6 +26,7 @@ use Symfony\Component\Serializer\Serializer;
 use Symfony\Contracts\Cache\CacheInterface;
 use Symfony\Contracts\Cache\ItemInterface;
 use Symfony\Component\Cache\Adapter\AdapterInterface;
+
 
 
 class JobController extends AbstractController
@@ -163,8 +165,20 @@ class JobController extends AbstractController
      */
     public function show(Job $job) : Response
     {
+        //get weather of city
+        // this header is added to all requests made by this client
+        $client = HttpClient::create(['http_version' => '2.0']);
+        $response = $client->request('GET', 'http://api.openweathermap.org/data/2.5/weather', [
+            // these values are automatically encoded before including them in the URL
+            'query' => [
+                'q' => $job->getPosition().',fr',
+                'appid' => 'f52acef00a950d131bce4f313d16fcb2'
+            ]
+        ]);
         return $this->render('job/show.html.twig', [
             'job' => $job,
+            'cityweather' => $response->toArray(),
+
         ]);
     }
    
