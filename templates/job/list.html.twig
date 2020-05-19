@@ -7,7 +7,12 @@
  {% endblock %}
 
 {% block body %}
+    <div>
+        <label for="serachJob">Query</label>
+        <input class="form-control" type="text" name="serachJob" id="serachJob">
+    </div>
    <h1 class="my-4">Liste des offres</h1>
+
     {% for categorie in categoriesData %}
         <div class="categories {{ categorie.category.name }}">
             <input id="categoryselect" type="hidden" data-categoryselect="{{ categorie.category.name  }}">

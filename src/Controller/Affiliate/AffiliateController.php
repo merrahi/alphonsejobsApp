@@ -9,6 +9,10 @@ use App\Service\FileLoader;
 use App\Entity\Job;
 use App\Form\JobType;
 use App\Service\MailerService;
+use Doctrine\DBAL\DBALException;
+use Doctrine\DBAL\Driver\PDOException;
+use Doctrine\ORM\ORMException;
+use MongoDB\Driver\Exception\Exception;
 use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
@@ -70,16 +74,45 @@ class AffiliateController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $affiliate->setIsActive(false);
-            $affiliate->setCreateAt(new \DateTime);
-            $affiliate->setToken($request->request->getAlnum('token'));
-            $this->em->persist($affiliate);
-            $this->em->flush();
-            $this->addFlash(
-                'notice',
-                'Affiliate ADDED!'
-            );
-            return $this->redirectToRoute('affiliate.wait');
+            try{
+                $affiliate->setIsActive(false);
+                $affiliate->setCreateAt(new \DateTime);
+                $affiliate->setToken($request->request->getAlnum('token'));
+                $this->em->persist($affiliate);
+
+                $this->em->flush();
+                $this->addFlash(
+                    'notice',
+                    'Affiliate ADDED!'
+                );
+                return $this->redirectToRoute('affiliate.wait');
+            } catch (DBALException $e) {
+                $this->addFlash(
+                    'exception',
+                    sprintf('DBALException [%i]: %s', $e->getCode(), $e->getMessage())
+                );
+                //$message = sprintf('DBALException [%i]: %s', $e->getCode(), $e->getMessage());
+            } catch (PDOException $e) {
+                $this->addFlash(
+                    'exception',
+                    sprintf('PDOException [%i]: %s', $e->getCode(), $e->getMessage())
+                );
+                //$message = sprintf('PDOException [%i]: %s', $e->getCode(), $e->getMessage());
+            } catch (ORMException $e) {
+                $this->addFlash(
+                    'exception',
+                    sprintf('ORMException [%i]: %s', $e->getCode(), $e->getMessage())
+                );
+                //$message = sprintf('ORMException [%i]: %s', $e->getCode(), $e->getMessage());
+            } catch (Exception $e) {
+                $this->addFlash(
+                    'exception',
+                    sprintf('Exception [%i]: %s', $e->getCode(), $e->getMessage())
+                );
+                //$message = sprintf('Exception [%i]: %s', $e->getCode(), $e->getMessage());
+            }
+
+
         }
         return $this->render('affiliate/create.html.twig', [
             'form' => $form->createView(),

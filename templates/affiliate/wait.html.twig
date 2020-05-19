@@ -2,6 +2,11 @@
 
 {% block body %}
     <div class="jumbotron">
+        {% for message in app.flashes('notice') %}
+            <div class="alert alert-danger">
+                {{ message }}
+            </div>
+        {% endfor %}
         <h3 class="text-center">
             <b>Your affiliate account has been created</b>
         </h3>
