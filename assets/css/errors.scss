@@ -1,0 +1,27 @@
+// css/affiliate/list.scss
+
+
+// import media
+@import "_media-query";
+
+//desktop
+@include desktop-and-below{
+  .alertError{
+
+  }
+  .errorIcon {
+    padding:0 10px;
+    margin:0;
+  }
+  .errorIcon img{
+    display: block;
+    margin: auto;
+  }
+  .messageError{
+        margin-top: 10px;
+  }
+}
+// Mobile
+@include mobile-only	{
+
+}

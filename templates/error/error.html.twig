@@ -1,12 +1,22 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}Error{% endblock %}
+ {% block stylesheets %}
+     {# 'app' must match the first argument to addEntry() in webpack.config.js #}
+     {{ parent() }}
+     {{ encore_entry_link_tags('css/errors') }}
+ {% endblock %}
 
 {% block body %}
     <h1 class="my-4">There is an Error!!!!</h1>
     {% for message in app.flashes('exception') %}
-        <div class="alert alert-danger">
+        <div class="alertError row" >
+            <div class="errorIcon col-sm-auto">
+                <img height="100px" width="100px" class="img-thumbnail"   src="{{ asset('errors/server_error.png' ) }}" alt="error" />
+            </div>
+            <div class="errorMessage alert alert-danger col">
             {{ message }}
+            </div>
         </div>
     {% endfor %}
 {% endblock %}
