@@ -12,6 +12,11 @@
         <input class="form-control" type="text" name="serachJob" id="serachJob">
     </div>
    <h1 class="my-4">Liste des offres</h1>
+    {% for message in app.flashes('exception') %}
+        <div class="alert alert-danger">
+            {{ message }}
+        </div>
+    {% endfor %}
 
     {% for categorie in categoriesData %}
         <div class="categories {{ categorie.category.name }}">

@@ -6,6 +6,10 @@ use App\Entity\Category;
 use App\Service\FileLoader;
 use App\Entity\Job;
 use App\Form\JobType;
+use Doctrine\DBAL\DBALException;
+use Doctrine\DBAL\Driver\PDOException;
+use Doctrine\ORM\ORMException;
+use MongoDB\Driver\Exception\Exception;
 use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
@@ -40,35 +44,63 @@ class JobController extends AbstractController
      */
     public function list(Request $request,PaginatorInterface $paginator) : Response
     {
-        $jobs = $this->getDoctrine()->getRepository(Job::class)->findAll();
-        //$cotegories = $this->getDoctrine()->getRepository(Category::class)->findAll();
-        /*$catReq=$request->query->getAlpha('cat');
-        if(!empty($catReq)){//ajax
-            $req=$this->getDoctrine()->getRepository(Job::class)->findWithActiveJobsByCat($catReq);
-        }*/
-        $page=$request->query->getInt('page', 1);
-        $cotegories = $this->getDoctrine()->getRepository(Category::class)->findWithActiveJobs();
-        $data =array();
-        foreach($cotegories as $category){
-            $jobs=$paginator->paginate(
-                $category->getJobs(), // Requête contenant les données à paginer (ici jobs)
+        try{
+            $jobs = $this->getDoctrine()->getRepository(Job::class)->findAll();
+            //$cotegories = $this->getDoctrine()->getRepository(Category::class)->findAll();
+            /*$catReq=$request->query->getAlpha('cat');
+            if(!empty($catReq)){//ajax
+                $req=$this->getDoctrine()->getRepository(Job::class)->findWithActiveJobsByCat($catReq);
+            }*/
+            $page=$request->query->getInt('page', 1);
+
+            $cotegories = $this->getDoctrine()->getRepository(Category::class)->findWithActiveJobs();
+            $data =array();
+            foreach($cotegories as $category){
+                $jobs=$paginator->paginate(
+                    $category->getJobs(), // Requête contenant les données à paginer (ici jobs)
+                    $request->query->getInt('page', 1), // Numéro de la page en cours, passé dans l'URL, 1 si aucune page
+                    3 // Nombre de résultats par page
+                );
+                $data[]=['category' => $category,'jobs'=>$jobs];
+                //$data[]=['category'=>[$cotegory,$myjobs]];
+            }
+            /*$jobs=$paginator->paginate(
+                $req, // Requête contenant les données à paginer (ici jobs)
                 $request->query->getInt('page', 1), // Numéro de la page en cours, passé dans l'URL, 1 si aucune page
                 3 // Nombre de résultats par page
-            );
-            $data[]=['category' => $category,'jobs'=>$jobs];
-            //$data[]=['category'=>[$cotegory,$myjobs]];
-        }
-        /*$jobs=$paginator->paginate(
-            $req, // Requête contenant les données à paginer (ici jobs)
-            $request->query->getInt('page', 1), // Numéro de la page en cours, passé dans l'URL, 1 si aucune page
-            3 // Nombre de résultats par page
-        );*/
+            );*/
 
-        return $this->render('job/list.html.twig', [
-            'jobs' => $jobs,
-            'categories' => $cotegories,
-            'categoriesData'=> $data
-        ]);
+            return $this->render('job/list.html.twig', [
+                'jobs' => $jobs,
+                'categories' => $cotegories,
+                'categoriesData'=> $data
+            ]);
+        }  catch (DBALException $e) {
+            $this->addFlash(
+                'exception',
+                sprintf('DBALException [%i]: %s', $e->getCode(), $e->getMessage())
+            );
+            //$message = sprintf('DBALException [%i]: %s', $e->getCode(), $e->getMessage());
+        } catch (PDOException $e) {
+            $this->addFlash(
+                'exception',
+                sprintf('PDOException [%i]: %s', $e->getCode(), $e->getMessage())
+            );
+            //$message = sprintf('PDOException [%i]: %s', $e->getCode(), $e->getMessage());
+        } catch (ORMException $e) {
+            $this->addFlash(
+                'exception',
+                sprintf('ORMException [%i]: %s', $e->getCode(), $e->getMessage())
+            );
+            //$message = sprintf('ORMException [%i]: %s', $e->getCode(), $e->getMessage());
+        } catch (Exception $e) {
+            $this->addFlash(
+                'exception',
+                sprintf('Exception [%i]: %s', $e->getCode(), $e->getMessage())
+            );
+            //$message = sprintf('Exception [%i]: %s', $e->getCode(), $e->getMessage());
+        }
+        return $this->render('error/error.html.twig');
     }
 
     /**
@@ -89,30 +121,59 @@ class JobController extends AbstractController
             $item->expiresAfter(3600);
             return $this->getDoctrine()->getRepository(Category::class)->find($cat);
         });*/
-        $categorie = $this->getDoctrine()->getRepository(Category::class)->find($cat);
-        //$data=array();
-        $jobs=$paginator->paginate(
-                $categorie->getJobs(), // Requête contenant les données à paginer (ici jobs)
-                $page, // Numéro de la page en cours, passé dans l'URL, 1 si aucune page
-                3 // Nombre de résultats par page
-            );
-        //$data=['category' => $categorie,'jobs'=>$jobs];
-        /*$encoder = new JsonEncoder();
-        $defaultContext = [
-            AbstractNormalizer::CIRCULAR_REFERENCE_HANDLER => function ($object, $format, $context) {
-                return $object->getId();
-            },
-        ];
-        $normalizer = new ObjectNormalizer(null, null, null, null, null, null, $defaultContext);
-        $serializer = new Serializer([$normalizer], [$encoder]);
-        $data=$serializer->serialize($data, 'json',[AbstractNormalizer::IGNORED_ATTRIBUTES => ['jobs']]);
-        $response = new Response($data);
-        $response->headers->set('Content-Type', 'application/json');
-        return $response;*/
-        return $this->render('job/paginate.html.twig', [
-            'jobs' => $jobs,
-            'category' => $categorie,
-        ]);
+
+       try{
+           $categorie = $this->getDoctrine()->getRepository(Category::class)->find($cat);
+           //$data=array();
+           $jobs=$paginator->paginate(
+               $categorie->getJobs(), // Requête contenant les données à paginer (ici jobs)
+               $page, // Numéro de la page en cours, passé dans l'URL, 1 si aucune page
+               3 // Nombre de résultats par page
+           );
+           //$data=['category' => $categorie,'jobs'=>$jobs];
+           /*$encoder = new JsonEncoder();
+           $defaultContext = [
+               AbstractNormalizer::CIRCULAR_REFERENCE_HANDLER => function ($object, $format, $context) {
+                   return $object->getId();
+               },
+           ];
+           $normalizer = new ObjectNormalizer(null, null, null, null, null, null, $defaultContext);
+           $serializer = new Serializer([$normalizer], [$encoder]);
+           $data=$serializer->serialize($data, 'json',[AbstractNormalizer::IGNORED_ATTRIBUTES => ['jobs']]);
+           $response = new Response($data);
+           $response->headers->set('Content-Type', 'application/json');
+           return $response;*/
+           return $this->render('job/paginate.html.twig', [
+               'jobs' => $jobs,
+               'category' => $categorie,
+           ]);
+       } catch (DBALException $e) {
+           $this->addFlash(
+               'exception',
+               sprintf('DBALException [%i]: %s', $e->getCode(), $e->getMessage())
+           );
+           //$message = sprintf('DBALException [%i]: %s', $e->getCode(), $e->getMessage());
+       } catch (PDOException $e) {
+           $this->addFlash(
+               'exception',
+               sprintf('PDOException [%i]: %s', $e->getCode(), $e->getMessage())
+           );
+           //$message = sprintf('PDOException [%i]: %s', $e->getCode(), $e->getMessage());
+       } catch (ORMException $e) {
+           $this->addFlash(
+               'exception',
+               sprintf('ORMException [%i]: %s', $e->getCode(), $e->getMessage())
+           );
+           //$message = sprintf('ORMException [%i]: %s', $e->getCode(), $e->getMessage());
+       } catch (Exception $e) {
+           $this->addFlash(
+               'exception',
+               sprintf('Exception [%i]: %s', $e->getCode(), $e->getMessage())
+           );
+           //$message = sprintf('Exception [%i]: %s', $e->getCode(), $e->getMessage());
+       }
+
+
     }
      /**
      * Creates a new job entity.
